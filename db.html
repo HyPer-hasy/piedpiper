@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pied Pier</title>
+  <link rel="icon" href="https://demo.fffuel.co/looking-ahead/images/favicon/favicon.ico" sizes="any">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--  the nav section of the page and also for mobile use -->
+  <nav class="main-nav">
+    <div class="nav-div">
+      <div class="nav-div-logo">
+        <a href="#" class="nav-div-logo-a">
+          <span class="logo-1">Pied</span>
+          <span class="logo-2">Piper</span>
+        </a>
+      </div>
+      <ul class="nav-div-menu">
+        <li>
+          <a class="nav-ul" href="#">home</a>
+        </li>
+        <li>
+          <a class="nav-ul" href="#">About Us </a>
+        </li>
+        <li>
+          <a class="nav-ul" href="#">FeedBack</a>
+        </li>
+      </ul>
+      <!-- sign in and login button section -->
+      <ul class="nav-div-sign">
+        <li><a href="img/p.pdf"> <button class="btn btn-dark-outline" onclick="sign()">Sign in</button></a></li>
+        <li><button class="btn btn-dark" onclick="sign()">Join now</button></li>
+      </ul>
+      <!-- Hamburger Menu -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="#">home</a>
+      </li>
+      <li>
+        <a href="#">about us</a>
+      </li>
+      <li>
+        <a href="#">feedback</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu-bottom">
+      <button class="btn btn-dark-outline" onclick="sign()">Sign in</button>&nbsp;
+      <button class="btn btn-dark" onclick="sign()">Join now</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"> </script>
+  </body>
+  </html>
