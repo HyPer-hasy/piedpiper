@@ -1,0 +1,422 @@
+/* getting started with the css
+2022 copyright . this css is written and coded by 
+ Satyam Kulshrestha and Yash  Maheshwari */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #041829;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* css for nav bar */
+
+.main-nav {
+  width: 100%;
+  height: auto;
+  background-color: #041829;
+}
+
+.nav-div {
+  padding: 20px;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* css for logo */
+.nav-div .nav-div-logo {
+  box-sizing: border-box;
+}
+
+.nav-div-logo .nav-div-logo-a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* the logo work is not complete */
+.nav-div-logo-a .logo-1 {
+  font-size: 1cm;
+  padding: 3px;
+}
+
+.nav-div-logo-a .logo-2 {
+  background-color: #f42a8b;
+  font-size: 1cm;
+  padding: 3px;
+  margin: 0px;
+}
+
+/* used combinators in css to do this of hover */
+
+.logo-1:hover {
+  background-color: #f42a8b;
+  transition: all 1s;
+}
+.logo-1:hover + .logo-2 {
+  background-color: transparent;
+  transition: all 1s;
+}
+
+/* css for the the ul menu */
+.nav-div ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-div li {
+  margin: 0 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.nav-div-menu .nav-ul {
+  font-size: x-large;
+  color: rgba(207, 194, 194, 0.63);
+}
+/* wanted to add the transtion but didnt work */
+.nav-div-menu:hover,
+.nav-ul:hover {
+  color: white;
+  transition: all 1s;
+}
+
+/* mobile view css 
+ Hamburger Menu Icon */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10;
+  transition: all 0.25s;
+  display: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: 1px white solid;
+  border-radius: 50px;
+  padding: 7px 16px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-dark-outline {
+  border-color: white;
+  color: white;
+}
+
+.btn:hover,
+.btn-dark-outline:hover {
+  border: none;
+  color: #041829;
+  background-color: white;
+  transition: all 1.3s;
+}
+
+.head-content {
+  height: 600px;
+  width: 100%;
+  display: grid;
+  padding: 10px;
+  margin-bottom: 30px;
+  align-items: stretch;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+.head-right {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: center;
+  padding: 10px;
+}
+
+.hand-right,
+.name-logo {
+  font-size: min(25vw, 120px);
+  font-family: Inter, SF Pro Display, -apple-system, sans-serif;
+  transition: all 1.3s;
+  font-weight: 800;
+  color: #041829;
+  animation: effect 2s both infinite;
+
+  animation-delay: 3s;
+}
+@keyframes effect {
+  0% {
+    text-shadow: -1px 5px 20px #f42a8b;
+    -webkit-text-stroke: 2px rgb(173, 162, 162);
+  }
+  100% {
+    color: white;
+    text-shadow: -1px 5px 20px #f42a8b;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: relative;
+  bottom: 0rem;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  scroll-behavior: smooth;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* sub navigtion couluns using grrid */
+
+/* heading name css */
+.head-sec {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.head-nam {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  font-size: 1.5cm;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* main sub nav css */
+.head-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-sub {
+  background-color: #030e16;
+  border-radius: 20px;
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+  margin-left: 10px;
+  align-items: center;
+  height: auto;
+  justify-self: center;
+}
+.grid-sub,
+.grid-sub-text {
+  font-size: 4vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-self: center;
+  align-items: center;
+  box-shadow: white;
+  color: rgb(175, 159, 159);
+  box-shadow: 2px solid white;
+  text-decoration: none;
+  transition: all 1s;
+}
+.grid-sub:hover {
+  border: 2px solid white;
+}
+.grid-sub:hover,
+.grid-sub-text:hover {
+  color: white;
+  text-shadow: -1px 5px 20px white;
+}
+footer {
+  display: block;
+}
+.footer {
+  padding-top: 40px;
+  text-align: center;
+  justify-content: center;
+  border-top: 1px solid rgb(173, 162, 162);
+}
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+  color: white;
+  font-size: large;
+}
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 85px;
+  text-transform: capitalize;
+  right: 0;
+  text-align: center;
+  background-color: #041829d5;
+  color: rgb(250, 244, 244);
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  transition: all 1.3s;
+}
+
+.mobile-menu ul {
+  line-height: 3;
+  border-bottom: rgb(228, 190, 190) solid 1px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  background: none !important;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(206, 191, 191, 0.548);
+}
+
+.mobile-menu a:hover {
+  color: white;
+
+  transition: all 1s;
+}
+
+.mobile-menu div {
+  margin-top: 1px;
+}
+
+.mobile-menu div a {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.hidden {
+  transform: translateX(100%);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-div-logo,
+  .logo-1,
+  .logo-2 {
+    width: auto;
+    height: auto;
+  }
+  .nav-div .nav-div-menu,
+  .nav-div .nav-div-sign {
+    display: none;
+  }
+  .arrow {
+    padding-top: 7rem;
+  }
+
+  .head-content {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+  .head-sec {
+    padding-top: 6rem;
+  }
+  .hand-right,
+  .head-left,
+  .name-logo {
+    font-size: min(20vw, 120px);
+  }
+  .head-sub-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-sub,
+  .grid-sub-text {
+    height: auto;
+  }
+  .footer {
+    text-align: center;
+  }
+}
