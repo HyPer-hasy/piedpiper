@@ -202,7 +202,7 @@ ul {
   color: #041829;
   animation: effect 2s both infinite;
 
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 @keyframes effect {
   0% {
